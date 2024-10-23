@@ -31,3 +31,12 @@ def completar_tarea(id):
 def eliminar_tarea(id):
     opciones.BorarTarea(id)#ejecuta el metodo
     return jsonify({'mensaje': f'Tarea {id} borrada'}), 200
+
+#se guardan las tareas
+@app.route('/guardar', methods=['POST'])
+def guardar_tareas():
+    opciones.GuardarTareas()
+    return jsonify({'mensaje': 'Tareas guardadas'}), 200
+
+if __name__ == '__main__':#verifica la ejecucion
+    app.run(debug=True)#cambios y errores
