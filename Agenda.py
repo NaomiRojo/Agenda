@@ -70,5 +70,19 @@ class OpcionesEjecutar:
 
         
 
+    #mostrar tareas
+    def VerTareas(self, archivo):
+        #todo sera en formato json
+        tareas = []#se guardaran las tareas
+    #leera el txt
+        with open(archivo, 'r') as f:
+            # Lee todas las líneas del archivo
+            for line in f:
+                tarea_data = json.loads(line)#de json a diccionario
+                tarea = Tarea(tarea_data['id'], tarea_data['titulo'])#crea ya añade la tarea
+                tarea.completada = tarea_data['completada']#completada s/n
+                tareas.append(tarea)#la agrega a la lista
+        return tareas
+    
 
 
