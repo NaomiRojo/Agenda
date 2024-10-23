@@ -25,11 +25,16 @@ class OpcionesEjecutar:
         id_tarea = len(self.tareas) + 1
         nueva_tarea = Tarea(id_tarea, titulo)  
         self.tareas.append(nueva_tarea)  
-        print(f"La tarea '{titulo}' fue agregada, ID {id_tarea}.")
+        print(f"La tarea '{titulo}' fue agregada, ID: {id_tarea}")
         # se añade una nueva tarea
 
     #marcar si la tarea esta completada
-    def TareasCompletadas():
+    def TareasCompletadas(self, id):
+        for tarea in self.tareas:#busca la tarea por su id
+            if tarea.id == id:
+                tarea.MarcarCompletada()#utiliza el metodo para marcar la tarea
+                print(f"Tarea {id} completada")
+                break
         
 
     #eliminar una tarea 
