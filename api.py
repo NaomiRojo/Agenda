@@ -24,3 +24,10 @@ def completar_tarea(id):
     opciones.TareasCompletadas(id)
     return jsonify({'mensaje': f'Tarea {id} lista'}), 200#marcaje listo
 
+
+
+#eliminar tarea
+@app.route('/tareas/<int:id>', methods=['DELETE'])#pasamos el id de la tarea a borrar
+def eliminar_tarea(id):
+    opciones.BorarTarea(id)#ejecuta el metodo
+    return jsonify({'mensaje': f'Tarea {id} borrada'}), 200
