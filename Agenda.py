@@ -8,7 +8,7 @@ class Tarea:
         self.completada = False
 
     # para marcar si la tarea fue completada
-    def marcar_completada(self):
+    def MarcarCompletada(self):
         self.completada = True
 
     # formato de texto
@@ -17,30 +17,34 @@ class Tarea:
     
 class OpcionesEjecutar:
     def __init__(self):
-        self.tareas = []
+        self.tareas = self.VerTareas('tareas.txt')#carga las tareas del archivo txt
 
 
     #agregar nueva tarea
-    def agregar_tarea():
-        
+    def NuevaTarea(self,titulo):
+        id_tarea = len(self.tareas) + 1
+        nueva_tarea = Tarea(id_tarea, titulo)  
+        self.tareas.append(nueva_tarea)  
+        print(f"La tarea '{titulo}' fue agregada, ID {id_tarea}.")
+        # se añade una nueva tarea
 
     #marcar si la tarea esta completada
-    def marcar_completada():
+    def TareasCompletadas():
         
 
     #eliminar una tarea 
-    def eliminar_tarea():
+    def BorarTarea():
         
 
     #mostrar las tareas pendientes
-    def listar_tareas_pendientes():
+    def TareasPendientes():
 
     #guardar tareas 
-    def guardar_tareas():
+    def GuardarTareas():
         
 
     #mostrar tareas
-    def cargar_tareas():
+    def VerTareas():
     
 
 
