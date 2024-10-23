@@ -38,11 +38,15 @@ class OpcionesEjecutar:
         
 
     #eliminar una tarea 
-    def BorarTarea():
+    def BorarTarea(self, id):
+        for tarea in self.tareas:#busca la tarea
+            if tarea.id == id:  
+                self.tareas.remove(tarea)#la elimina si coincide
+                print(f"Tarea {id} borrada")
+            else : print(f"la tarea {id} no existe")
+            
         
 
-    #mostrar las tareas pendientes
-    def TareasPendientes():
 
     #guardar tareas 
     def GuardarTareas():
