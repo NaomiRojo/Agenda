@@ -56,11 +56,19 @@ class OpcionesEjecutar:
        
 
     #guardar tareas 
-    def GuardarTareas():
+    def GuardarTareas(self):
+        # en un archivo txt guarda las tareas en formato json
+        with open('tareas.txt', 'w') as t:#el archivo se llama tareas
+            for tarea in self.tareas:
+                tar = {#por cada tarea un diccionario
+                    'id': tarea.id,
+                    'titulo': tarea.titulo,
+                    'completada': tarea.completada
+                }
+                t.write(json.dumps(tar) + '\n')#le da el formato como json
+        print("Guardado")
+
         
 
-    #mostrar tareas
-    def VerTareas():
-    
 
 
