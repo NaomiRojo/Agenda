@@ -14,10 +14,10 @@ en el cmd ejecutar: pip install Flask
 
 Para ejecutar la aplicación en consola:
 ingrese a la carpeta donde tiene descargado los archivos y escriba
-python Agenda.py
+"python Agenda.py"
 tambien para ejecutar la API RESTful:
-python api.py
-Para acceder a la API mediante la web: http://localhost:5000/tareas
+"python api.py"
+Para acceder a la API mediante la web: "http://localhost:5000/tareas"
 
 Funciones:
 Añadir, eliminar y completar tareas, mostrar tareas pendientes de un archivo txt de nombre tareas
