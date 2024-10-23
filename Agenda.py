@@ -86,3 +86,47 @@ class OpcionesEjecutar:
     
 
 
+def MenuOp():
+    opciones = OpcionesEjecutar()
+    
+    while True:
+        print("\nOpciones")
+        print("1) Añadir tarea")
+        print("2) Eliminar tarea")
+        print("3) Marcar tarea como completada")
+        print("4) Listar tareas pendientes")
+        print("5) Guardar y salir")
+        
+        opcion = input("Selecciona una opción: ")
+        if opcion == '1':
+            titulo = input("Ingrese el titulo de su tarea: ")#coloca titulo
+            opciones.NuevaTarea(titulo)  # Agrega la nueva tarea
+        
+        elif opcion == '2':
+            id_tarea = int(input("ingrese el id de la tarea a borrar"))#pide id
+            opciones.BorarTarea(id_tarea)  # Elimina la tarea
+        
+        elif opcion == '3':
+            id_tarea = int(input("ingrese el id de la tarea completada "))#pide id
+            opciones.TareasCompletadas(id_tarea)#marca la tarea
+        
+        elif opcion == '4':
+            pendientes = opciones.TareasPendientes()#muestra los pendientes
+            if pendientes:
+                print("\nTareas Pendientes")
+                for tarea in pendientes:
+                    print(tarea)
+            else:
+                print("Sin pendientes")
+        
+        elif opcion == '5':
+            opciones.GuardarTareas()#se guardan las tareas y termina
+            print("Listo")
+            break
+        
+        else:
+            print("Opción inválida, intente otra vez")  
+
+#gestión de tareas en consola
+if __name__ == "__main__":
+    MenuOp() #muestra las opciones al verificar el archivo
