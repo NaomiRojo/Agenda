@@ -47,6 +47,13 @@ class OpcionesEjecutar:
             
         
 
+    #mostrar las tareas pendientes
+    def TareasPendientes(self):
+        pendientes = [tarea for tarea in self.tareas if not tarea.completada]#en una nueva lista se añaden las tareas pendientes definidas por completada
+        print("\nTareas Pendientes")
+        for tarea in pendientes:
+            print(tarea)
+       
 
     #guardar tareas 
     def GuardarTareas():
