@@ -130,3 +130,15 @@ def MenuOp():
 #gestión de tareas en consola
 if __name__ == "__main__":
     MenuOp() #muestra las opciones al verificar el archivo
+
+
+
+
+
+
+
+
+
+""" mi enfoque esta en dividir el problema en pequeñas partes que pueda resolver por separado,
+el analisis inicia con las entradas y salidas del programa, seguido de los procesos que se llevaran a cabo,
+y replanteamineto de la estrategia para cumplir con el requerimiento. """
